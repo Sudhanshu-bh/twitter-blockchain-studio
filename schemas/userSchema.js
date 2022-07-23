@@ -9,6 +9,12 @@ export const userSchema = {
       type: 'string',
     },
     {
+      name: 'handle',
+      title: 'Handle',
+      type: 'string',
+      validation: (Rule) => Rule.required().min(5).max(22),
+    },
+    {
       name: 'walletAddress',
       title: 'Wallet Address',
       type: 'string',
